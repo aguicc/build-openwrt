@@ -8,6 +8,12 @@
 
 # ------------------------------- Main source started -------------------------------
 #
+# 先删除 feeds.conf.default 里已有的 helloworld 相关行，避免重复添加
+sed -i "/helloworld/d" "feeds.conf.default"
+
+# 添加 helloworld 源
+echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+
 # Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
 # sed -i 's/luci-theme-bootstrap/luci-theme-material/g' ./feeds/luci/collections/luci/Makefile
 
