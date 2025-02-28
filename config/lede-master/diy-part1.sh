@@ -9,6 +9,12 @@
 # Add a feed source
 # sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
+# 先删除 feeds.conf.default 里已有的 helloworld 相关行，避免重复添加
+sed -i "/helloworld/d" "feeds.conf.default"
+
+# 添加 helloworld 源
+echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+
 # other
 # rm -rf package/lean/{samba4,luci-app-samba4,luci-app-ttyd}
 
