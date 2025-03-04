@@ -13,7 +13,7 @@
 sed -i "/helloworld/d" "feeds.conf.default"
 
 # 添加 helloworld 源
-echo "" >> "feeds.conf.default"
+echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
 
 
 # other
