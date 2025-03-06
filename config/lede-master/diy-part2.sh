@@ -8,7 +8,8 @@
 
 # ------------------------------- Main source started -------------------------------
 #
-
+# 源地址#
+# https://github.com/xinlingduyu/build-openwrt/blob/main/config/lede-master/diy-part2.sh
 
 # Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
 # sed -i 's/luci-theme-bootstrap/luci-theme-material/g' ./feeds/luci/collections/luci/Makefile
